@@ -1,0 +1,36 @@
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.divContainer{
+    border: 1px solid  #BDBDBD;
+    ;
+    border-radius: 10px;
+    width: 17rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 120px;
+  
+}
+
+.divMain{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.divContainerInfo{
+    border: 1px solid black;
+    width: 15rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.divInfo{
+    display: flex;
+}
+
