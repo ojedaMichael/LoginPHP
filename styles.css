@@ -4,10 +4,102 @@
 
 .divContainer{
     border: 1px solid  #BDBDBD;
-    ;
     border-radius: 10px;
-    width: 17rem;
-    height: 22rem;
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+   
+    margin-top: 120px;
+  
+}
+
+.divMain{
+    display: grid;
+    justify-content: center;
+    
+}
+.divContainerInfo{
+    border: 1px solid  #BDBDBD;
+    border-radius: 10px;
+    width: 50rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  
+}
+.divContainerInfo{
+    border: 1px solid  #BDBDBD;
+    border-radius: 10px;
+    width: 50rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  
+}
+.divInfo{
+   display: flex;
+   justify-content: space-between;
+   padding: 17px;
+   border-top: #BDBDBD solid 1px;
+}
+.divInfo2{
+   display: flex;
+   
+   padding: 17px;
+   border-top: #BDBDBD solid 1px;
+}
+
+.divImg{
+  width: 100%;
+  display: flex;
+  margin-left: 10px;
+}
+
+.button-blue{
+  color:white;
+  border-radius: 7px;
+  border: none;
+  height: 5vh;
+  width: 70%;
+   background-color:  rgb(12, 140, 233)
+
+}
+
+.classInput{
+    border-radius: 7px;
+    border: solid 0.5px #BDBDBD ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 5vh;
+    width: 70%;
+}
+.form{
+    display: flex;
+}
+.divform{
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.classInput > input {
+    outline:none;
+    border: none;
+}
+
+.divInfoDashboard{
+    border: 1px solid  #BDBDBD;
+    border-radius: 10px;
+    width: 20rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,21 +108,7 @@
   
 }
 
-.divMain{
+.navLogout{
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: end;
 }
-.divContainerInfo{
-    border: 1px solid black;
-    width: 15rem;
-    height: 20rem;
-    display: flex;
-    flex-direction: column;
-   
-    
-}
-.divInfo{
-    display: flex;
-}
-

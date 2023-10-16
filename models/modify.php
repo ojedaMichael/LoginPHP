@@ -10,12 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     extract($_POST);
     
-    // Comprueba que el ID sea válido (puede requerir más validación)
     if (is_numeric($id)) {
-        // Crea un array de campos a actualizar
         $fieldsToUpdate = array();
         
-        // Verifica cada campo y agrega la actualización correspondiente al array
         if ($nombre !== "") {
             $fieldsToUpdate[] = "nombre = '$nombre'";
         }
@@ -37,12 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $fieldsToUpdate[] = "contraseña = '$hash'";
         }
         
-        // Si hay campos para actualizar, construye la consulta SQL y ejecútala
         if (!empty($fieldsToUpdate)) {
             $updateFields = implode(', ', $fieldsToUpdate);
             $query = "UPDATE usuarios SET $updateFields WHERE id_usuario = $id";
             if ($mysqli->query($query)) {
-                // Consulta exitosa
                 $response = $mysqli->query("SELECT * FROM usuarios WHERE id_usuario = $id");
                 $data = $response->fetch_all(MYSQLI_ASSOC);
 
@@ -50,15 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_SESSION["user"] = $data;
                 header("Location: /views/dashboard.php");
             } else {
-                // Error en la consulta SQL
                 echo "Error en la actualización de datos. Por favor, inténtalo de nuevo.";
             }
         } else {
-            // No se proporcionaron campos para actualizar
             echo "No se proporcionaron campos para actualizar.";
         }
     } else {
-        // ID no válido
         echo "ID de usuario no válido.";
     }
 } else {
